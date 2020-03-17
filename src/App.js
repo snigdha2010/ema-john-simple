@@ -25,7 +25,9 @@ function App() {
       <Router>
 
         <Switch>
-          
+           <Route exact path='/'>
+            <Shop></Shop>
+          </Route>
           <Route path='/shop' >
             <Shop></Shop>
           </Route>
@@ -39,9 +41,7 @@ function App() {
           <Route path='/product/:productKey'>
             <ProductDescription></ProductDescription>
           </Route>
-          <Route exact path='/'>
-            <Shop></Shop>
-          </Route>
+         
           <Route path='*'>
             <NotFound></NotFound>
           </Route>

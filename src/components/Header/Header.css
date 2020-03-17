@@ -16,7 +16,8 @@
        padding: 10px;
        margin-right: 20px;
    }
-   a:hover{
+  nav a:hover{
        background-color: gray;
+       text-decoration: none;
    }
    
