@@ -1,10 +1,13 @@
-import React from 'react';
-import Product from '../Product/Product';
+import React, { useContext } from 'react';
+import { useAuth } from '../Login/useAuth';
+
 
 
 const Cart = (props) => {
 
     const cart = props.cart;
+    const auth = useAuth();
+    console.log(auth);
    // const total = cart.reduce((total,product)=>total+product.price,0);
    let total = 0; 
    for(let i=0; i<cart.length;i++){
@@ -28,7 +31,7 @@ const Cart = (props) => {
    const grandTotal = (total+shipping+tax);
     return (
         <div>
-             <h3>This is the Cart</h3>
+             <h3 className="bg-danger">This is the Cart</h3>
             <h4>Order summery:{cart.length}</h4>
             <p>Item Total:{formatNum(total)}</p>
             <p>Shipping:{shipping}</p>
@@ -37,9 +40,10 @@ const Cart = (props) => {
             <br/>
             {
                 props.children
+                
             }
 
-            
+            <p>{}</p>
 
         </div>
     );
